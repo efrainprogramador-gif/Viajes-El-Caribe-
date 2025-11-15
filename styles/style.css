@@ -1,3 +1,10 @@
+/* Reseteo del margin-padding */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /* Fuente Monserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* font-family: "Montserrat", sans-serif; */
@@ -13,6 +20,74 @@ body {
 
 header {
     font-family: "Libre Baskerville", serif;
+}
+
+/* Navbar Bootstrap con estilo individual */
+.navbar {
+    background-color: rgb(25, 14, 186); /* color del fondo */
+    padding: 13px 20px 12px 18px; 
+}
+
+.navbar .nav-link {
+    color: white; /* color de los enlaces */
+    font-family:serif; 
+    font-weight:bolder;
+}
+
+.navbar .nav-link:hover {
+    color:chartreuse !important; ;/* apliqué important porque fue la manera como me marque el color flotante*/
+}
+
+.navbar .nav-link:active {
+    color: aqua !important; /* cuando se presiona click cambia a este color */
+}
+
+
+/* Navbar Brand personalizado */
+.navbar .navbar-brand {
+    font-family:Arial, Helvetica, sans-serif, Times, serif; /* Fuente del logotipo */
+    font-style: italic;
+    color: whitesmoke; 
+    font-size: 26px; 
+    display: flex;
+    align-items: center; 
+    gap:  12px; 
+}
+
+.navbar .navbar-brand img {
+    width: 75px; /* tamaño del logo */
+    height: auto;
+}
+
+
+
+/* Botón hamburguesa personalizado */
+.navbar-toggler {
+    border-color: #fff; /* borde del botón hamburguesa */
+    border-width: 3px;
+    border-radius: 10px; /* Agregado borde-radius */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    border: 2px solid whitesmoke;
+    background-color:rgb(8, 8, 172);
+    
+}
+
+/* Aplico pseudoclases para dar mis estilos */
+
+.navbar-toggler:hover {
+    background-color:aquamarine; 
+    
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none; /* quita el borde negro del click */
+    box-shadow: none; /* quita cualquier sombra */
+   
+    
 }
 
 

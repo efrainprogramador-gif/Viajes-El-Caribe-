@@ -4,6 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Cdn de Bootstrap a Css -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
   <!-- Css enrutado, asi para las otras paginas de la carpeta page -->
   <link rel="stylesheet" href="../styles/style.css">
   <title>Historia</title>
@@ -12,31 +17,41 @@
 <body>
   <header>
 
-    <!-- Imagen provisional, luego será cambiada por el ícono de la agencia de viajes  -->
+   <nav class="navbar navbar-expand-lg ">
+    <div class="container">
 
-    <img src="https://placehold.co/100x100" alt="Logotipo de la Agencia de Viajes">
-    <nav>
-      <ul>
+      <a class="navbar-brand" href="./index.html">
+        <img src="https://placehold.co/100x100" alt="Logotipo de la Agencia de Viajes" width="50">
+        Viajes "El Caribe"
+      </a>
 
-        <!-- lista desordenada se ve de forma vertical pero debe quedar como en el boceto en forma horizontal, se irá modificando a medida que avancemos con ese tema -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <li class="li-nav">
-          <a href="../index.html" class="a-nav">Inicio</a>
-        </li>
-        <li class="li-nav">
-          <a href="#" class="a-nav">Historia</a>
-        </li>
-        <li class="li-nav">
-          <a href="./gastronomia.html" class="a-nav">Gastronomía</a>
-        </li>
-        <li class="li-nav">
-          <a href="./sitiosturisticos.html" class="a-nav">Sitios Turísticos</a>
-        </li>
-        <li class="li-nav">
-          <a href="./contacto.html" class="a-nav">Contacto</a>
-        </li>
-      </ul>
-    </nav>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link a-nav" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link a-nav" href="./historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link a-nav" href="./gastronomia.html">Gastronomía</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link a-nav" href="./sitiosturisticos.html">Sitios Turísticos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link a-nav" href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
   </header>
 
   <main>
@@ -79,6 +94,10 @@
 
     <img src="https://placehold.co/100x30" alt="ícono a una red">
   </footer>
+
+    <!-- Cdn de Bootstrap a JavaScript  -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
