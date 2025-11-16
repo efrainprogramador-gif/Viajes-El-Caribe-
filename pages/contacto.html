@@ -7,7 +7,7 @@
 
 <!-- Cdn de Bootstrap a Css -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
   <link rel="stylesheet" href="../styles/style.css">
@@ -57,45 +57,99 @@
   <main>
     <section>
       <h1>Contacto</h1>
+      <br>
 
-      <h2>Sobre Nuestra Agencia de Viajes</h2>
+      <h3>Sobre Nuestra Agencia de Viajes</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt maiores asperiores numquam nulla
         suscipit ex aliquid, eligendi culpa est repellat excepturi eveniet cupiditate, iste veniam, dicta distinctio
         tenetur ad?</p>
 
-      <h3>Datos Personales</h3>
+      <h4>Datos Personales</h4>
 
-      <!-- Aqui se va a colocar un formulario con entradas de Datos y Comentarios -->
-      <p class="p-izquierda">Nombre y Apellido</p>
-      <p class="p-izquierda">Género</p>
-      <p class="p-izquierda">N° de Personas</p>
-      <p class="p-izquierda">e-mail</p>
-      <p class="p-izquierda">Comentarios</p>
-      <p class="p-izquierda">Enviar</p>
-      <p class="p-izquierda">Borrar</p>
+      <!-- Formulario para solicitud de datos de personas interesadas en mas información -->
+
+      <div class="contenedor-contacto">
+
+        <form class="form-contacto">
+
+          <div class="form-entrada">
+          <label for="nombre">Nombre y Apellido:</label>
+          <input type="text" id="nombre" placeholder="Homero Simpsons">
+          </div>
+
+            <div class="form-entrada">
+              <label for="genero">Género</label>
+              <select name="genero" id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="independiente">Independiente</option>
+
+              </select>
+            </div>
+
+            <div class="form-entrada">
+              <label for="personas">N° de Personas</label>
+              <input type="number" id="personas" >
+            </div>
+
+            <div class="form-entrada">
+              <label for="email">e-mail</label>
+              <input type="email" id="email" placeholder="homero_simpsons@gmail.com">
+            </div>
+
+            <div class="form-entrada">
+              <label for="comentarios">Comentarios</label>
+              <textarea name="comentarios" id="comentarios" rows="5" placeholder="Escriba su consulta aquí"></textarea>
+
+            </div>
+
+            <div class="form-botones">
+              <button type="submit">Enviar</button>
+              <button type="reset" class="borrar">Borrar</button>
+            </div>
+
+
+        </form>  
+
+        
+      <div class="contacto-img">
+    <img src="https://placehold.co/500x400" alt="Imagen relacionada con contacto">
+</div>
+      </div>
 
     </section>
 
-    <section>
+    <div class="info-final">
+
+    <section class="lema">
+
       <h3>Nuestro Lema</h3>
+
       <p class="p-textodestacado">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nesciunt iusto
         voluptates dignissimos commodi
         eaque, itaque ex quas omnis voluptatum neque accusantium cupiditate, fuga non quis! Id vel exercitationem
         cupiditate!</p>
+ </section>
+
+      <section class="n-historia">
+
       <h3>Nuestra Historia como Agencia de Viajes</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum reprehenderit laboriosam eveniet laborum! Beatae
         incidunt accusantium, nam atque quis asperiores reprehenderit! Iure vero autem sunt veniam omnis consectetur
         nulla tempora?</p>
 
-    </section>
+   </section>
 
-    <section>
+    <section class="n-ubicacion">
       <h3>Nuestra Ubicación</h3>
 
       <!-- Se va a colocar un mapa con acceso por googlemaps -->
 
       <img src="https://placehold.co/200x150" alt="ubicacion geográfica de la agencia">
+      
+
     </section>
+</div>
   </main>
 
   <footer>
@@ -109,7 +163,7 @@
 
   <!-- Cdn de Bootstrap a JavaScript  -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 

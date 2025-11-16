@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Cdn de Bootstrap a Css -->
+  <!-- Cdn de Bootstrap a Css -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
   <link rel="stylesheet" href="../styles/style.css">
@@ -18,65 +19,88 @@
   <header>
 
     <nav class="navbar navbar-expand-lg ">
-    <div class="container">
+      <div class="container">
 
-      <a class="navbar-brand" href="./index.html">
-        <img src="https://placehold.co/100x100" alt="Logotipo de la Agencia de Viajes" width="50">
-        Viajes "El Caribe"
-      </a>
+        <a class="navbar-brand" href="./index.html">
+          <img src="https://placehold.co/100x100" alt="Logotipo de la Agencia de Viajes" width="50">
+          Viajes "El Caribe"
+        </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link a-nav" href="../index.html">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link a-nav" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-nav" href="./historia.html">Historia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-nav" href="./gastronomia.html">Gastronomía</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-nav" href="./sitiosturisticos.html">Sitios Turísticos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link a-nav" href="./contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion-grillas">
+
+      <div class="contendor-texto">
+
+        <h1>Gastronomía</h1>
+
+        <h3>Platos Típicos</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt maiores asperiores numquam nulla
+          suscipit ex aliquid, eligendi culpa est repellat excepturi eveniet cupiditate, iste veniam, dicta distinctio
+          tenetur ad?</p>
+      </div>
+
+      <div class="contenedor-imagen1 plato-central">
+        <img src="https://placehold.co/600x300" alt="Plato Típico Margariteño">
+      </div>
+    </section>
+
+    <section class="seccion-grillas">
+      <div class="contenedor-texto">
+        <h3>Platos Principales</h3>
+      </div>
+      <!-- Se describes diferentes platos con nombre e imágenes del lado derecho -->
+
+      <div class="contenedor-imagen1">
+
+        <!-- En los platos principales uso de solo flexbox para mayor precisión -->
+
+        <ul class="platos-principales">
+          <li>
+           <span>Plato 1</span>
+             <img src="https://placehold.co/270x100" alt="platotipico">
           </li>
-          <li class="nav-item">
-            <a class="nav-link a-nav" href="./historia.html">Historia</a>
+
+          <li>
+            <span>Plato 2</span>
+           <img src="https://placehold.co/270x100" alt="platotipico">
           </li>
-          <li class="nav-item">
-            <a class="nav-link a-nav" href="./gastronomia.html">Gastronomía</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link a-nav" href="./sitiosturisticos.html">Sitios Turísticos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link a-nav" href="./contacto.html">Contacto</a>
+
+          <li>
+              <span>Plato 3</span>
+           <img src="https://placehold.co/270x100" alt="platotipico">
           </li>
         </ul>
       </div>
 
-    </div>
-  </nav>
-  </header>
-
-  <main>
-    <section>
-      <h1>Gastronomía</h1>
-   
-    <h2>Platos Típicos</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt maiores asperiores numquam nulla
-      suscipit ex aliquid, eligendi culpa est repellat excepturi eveniet cupiditate, iste veniam, dicta distinctio
-      tenetur ad?</p>
-
-    <img src="https://placehold.co/400x200" alt="Plato Típico Margariteño">
-     </section>
-
-    <section>
-      <h2>Platos Principales</h2>
-
-      <!-- Se describes diferentes platos con nombre e imágenes del lado derecho -->
-
-      <ul>
-        <li>Plato 1 <img src="https://placehold.co/90x20" alt="platotipico"></li>
-        <li>Plato 2 <img src="https://placehold.co/90x20" alt="platotipico"></li>
-        <li>Plato 3 <img src="https://placehold.co/90x20" alt="platotipico"></li>
-      </ul>
-      
     </section>
   </main>
 
@@ -90,9 +114,11 @@
   </footer>
 
 
-    <!-- Cdn de Bootstrap a JavaScript  -->
+  <!-- Cdn de Bootstrap a JavaScript  -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
 </body>
 
