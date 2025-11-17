@@ -318,22 +318,35 @@ border-radius: 5px;
 }
 
 
+/* Modifico el footer al estilo de Grids */
+
+.f-grids {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    padding: 20px;
+    background-color: rgba(167, 105, 225, 0.143);
+    color: blue;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-info {
+    display: grid;
+}
 
 .footer-p {
-    font-size: 12px;
+    margin: 0;
+    font-size: 14px;
 }
 
-.li-nav  {
-   list-style-type: none;
+.f-redes {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 25px;
+    justify-self: start; /*alineación inicial*/
 }
 
-.a-nav {
-    text-decoration: none;
-    color: blue;
-}
-
-
-
-.p-izquierda {
-    text-align: left;
+.f-redes img {
+    width: 50px;
+    height: auto;
 }
