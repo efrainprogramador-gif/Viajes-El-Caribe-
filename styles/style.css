@@ -323,7 +323,7 @@ border-radius: 5px;
 .f-grids {
     display: grid;
     grid-template-columns: 2fr 1fr; 
-    padding: 20px;
+    padding: 15px;
     background-color: rgba(167, 105, 225, 0.143);
     color: blue;
     align-items: center;
@@ -349,4 +349,219 @@ border-radius: 5px;
 .f-redes img {
     width: 50px;
     height: auto;
+}
+
+/* Consulta de Medios / Media Query Responsive */
+
+/* Media Query para el navbar con 2 breakpoint para celulares, tablets y computadoras de escritorio */
+
+/* Celulares menos de 576px*/
+
+@media (max-width: 575px) {
+
+    .navbar {
+        padding: 8px 10px; 
+    }
+
+    .navbar-brand {
+        font-size: 20px; 
+    }
+
+    .navbar-brand img {
+        width: 45px; 
+    }
+
+    .navbar .nav-link {
+        padding: 10px 15px; 
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .navbar-collapse {
+        background-color: rgb(25,14, 186) ;
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .navbar-toggler {
+        padding: 4px; 
+    }
+
+    .navbar-toggler-icon {
+        width: 21px;
+        height: 17px;
+    }
+}
+
+/* Tablets o Laptops entre 576px y 992px */
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
+
+    .navbar-brand img {
+        width: 60px;
+    }
+
+    .navbar .nav-link {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+}
+
+/* Media Query para el footer con 2 breakpoint para celulares, tablets y computadoras de escritorio */
+
+/* Celulares menos de 576px*/
+
+@media (max-width: 575px) {
+
+    .f-grids {
+        grid-template-columns: 1fr; 
+        text-align: center;         
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .footer-p {
+        font-size: 12px;            
+        line-height: 1.4;
+    }
+
+    .f-redes {
+        grid-template-columns: repeat(3, 1fr); 
+        justify-items: center;
+        gap: 15px;
+    }
+
+    .f-redes img {
+        width: 40px; /
+    }
+}
+
+/* Tablets o Laptops chicas (576px a 992px) */
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+    .f-grids {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .footer-p {
+        font-size: 14px;
+    }
+
+    .f-redes {
+        grid-template-columns: repeat(3, auto);
+        justify-self: center; 
+        gap: 20px;
+    }
+
+    .f-redes img {
+        width: 45px; 
+    }
+}
+
+/* Media Query para el main de La Página: INDEX */
+
+/* Celulares menos de 576px */
+
+@media (max-width: 575px) {
+
+    .seccion-grillas.horizontal {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+
+    .contenedor-texto {
+        align-items: center;
+    }
+
+    .contenedor-imagen1,
+    .contenedor-imagen2 {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+/* Tablets o Laptops entre 576px y 992px */
+
+@media (min-width: 576px) and (max-width: 992px) {    
+    .seccion-grillas.horizontal {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+}
+
+/* Media Query para el main de La Página: CONTACTO */
+/* Menos de 576px */
+
+@media (max-width: 575px) {
+  .contenedor-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-contacto,
+  .contacto-img img {
+    width: 100%;
+  }
+
+  .info-final {
+    grid-template-columns: 1fr; /* 1 columna */
+  }
+}
+
+/* Entre 576px y 991px */
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .contenedor-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-contacto,
+  .contacto-img img {
+    width: 70%; /* ancho intermedio */
+    max-width: 400px;
+  }
+
+  .info-final {
+    grid-template-columns: 1fr; 
+  }
 }
