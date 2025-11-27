@@ -17,6 +17,9 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     background-color: rgba(11, 243, 243, 0.128);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -105,6 +108,10 @@ header {
 
 main {
     padding: 8px 12px;
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -139,7 +146,7 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    align-items: center;
+    align-items: start;
 }
 
 .vertical {
@@ -161,9 +168,156 @@ p {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    border: 2px solid rgb(25,14, 186);
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Imagen dentro del figure */
+.contenedor-imagen1 img,
+.contenedor-imagen2 img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.contenedor-imagen1 figcaption,
+.contenedor-imagen2 figcaption {
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    color: rgb(186,14,143); /*color del navbar */
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.imagen-ajustada {
+    margin-top: 20px;
+}
+
+.titulo-principal {
+    margin-top: 20px;   
+}
+
+.text-left {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    gap: 20px;
+    align-items: center;
+}
+    .text-left .contenedor-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.text-left .contenedor-imagen2 {
+    width: 300px; 
+    height: auto;
+}
+
+.text-left .contenedor-imagen2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilos a pagina de historia */
+
+.seccion-grillas.colonizacion .contenedor-imagen-texto {
+    display: flex;
+    flex-direction: row;  /* imagen a la izquierda, texto a la derecha */
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 15px;     /* para separar del h3 */
+}
+
+.seccion-grillas.colonizacion .contenedor-imagen2 {
+  margin-right: 20px;
+   max-width: 300px;
+}
+
+.seccion-grillas.colonizacion .contenedor-imagen2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.seccion-grillas.colonizacion .contenedor-texto {
+    flex: 1;               /* ocupa el resto del espacio */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 
+
+/* Responsivo a página Historia */
+
+/* Para Celulares */
+
+@media (max-width: 575px) {
+  @media (max-width: 575px) {
+    .seccion-grillas.colonizacion .contenedor-imagen-texto {
+        flex-direction: column; 
+        align-items: center;    
+        gap: 10px;
+    }
+
+    .seccion-grillas.colonizacion .contenedor-imagen2 {
+        width: 80%;  
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .seccion-grillas.colonizacion .contenedor-texto {
+        width: 100%;
+        text-align: center;
+    }
+}
+}
+
+@media (min-width: 576px) and (max-width:992px) {
+    .historia-horizontal{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .historia-colonizacion .contenedor-imagen-texto {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .historia-horizontal h1, .historia-colonizacion h1 {
+        font-size: 20px;
+    }
+
+    .historia-horizontal p, .historia-colonizacion p {
+        font-size: 17px;
+    }
+}
+
+
+/* Estilos a Gastronomía */
+
+.plato-frito {
+    width: 700px;
+    height: auto;
+}
+
+.plato-central {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    margin: 0 auto;         
+}
+.plato-central img {
+    width: 600px;
+    height: 450px; 
+    display: block;
+}
 /* Agregando flexbox a la pagina gastronomía */
 
 .platos-principales {
@@ -178,35 +332,126 @@ p {
 .platos-principales li {
     display: flex;
     align-items: center;
-    /*alinea el nombre de los platos con las imagenes de los platos*/
+    
     justify-content: flex-start;
     padding: 5px 10px;
     border-radius: 3px;
     gap: 20px;
-    /*Espacio vertical y horizontal entre el texto y la imagen del plato*/
+    
 }
 
 .platos-principales li img {
     width: 270px;
-    max-width: 100%;
-    /*utilizo esta propiedad para evitar que crezca mas de 270px a lo ancho*/
-    height: 100px;
-    max-height: 100%;
-    /*utilizo esta propiedad para evitar que crezca mas de 100px a lo alto */
+    max-width: 100%;   
+    height: 200px;
+    max-height: 100%;  
 
 }
 
-.plato-central {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Responsivo a Gastronomía */
+/* Para celulares */
+
+@media (max-width: 575px) {
+    .gastronomia .plato-central img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gastronomia .platos-principales {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .gastronomia .platos-principales li {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .gastronomia .platos-principales li img {
+        width: 90%;
+        height: auto;
+    }
+
+    .gastronomia .contenedor-texto p, .gastronomia .contenedor-texto h3 {
+        font-size: 16px;
+    }
+
+    .gastronomia .tituloh1-centrado {
+        font-size: 24px;
+    }
+
 }
 
-.plato-central img {
-    width: 600px;
-    height: 300px;
-    display: block;
+/* Responsivo Gastronomia para tablets-laptos */
+
+@media (min-width: 576px) and (max-width: 992px) {
+    .gastronomia .plato-central img {
+        width: 80%;
+        height: auto;
+    }
+
+    .gastronomia .platos-principales li img {
+        width: 70%;
+        height: auto;
+    }
+
+    .gastronomia .contenedor-texto p, .gastronomia .contenedor-texto h3 {
+        font-size: 18px;
+    }
+
+    .gastronomia .tituloh1-centrado {
+        font-size: 28px;
+    }
 }
+
+/* Responsivo .text-left */
+
+@media (max-width: 575px) {
+    .text-left {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+
+    .text-left .contenedor-imagen2 {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+
+/* Estilos a página sitios turísticos */
+
+.castillo {
+    margin-top: 40px;
+}
+
+.img-playaelagua {
+    width: 80%;
+    margin: 0 auto;
+}
+.img-playaelagua img{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.img-basilica {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.img-basilica img{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+
+
 
 /* Estilos para el formulario en pagina contacto usando flexbox */
 
@@ -214,10 +459,9 @@ p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 15px 0;
-    max-width: 40%;
+    min-width: 300px;
     /*Máximo de ancho en cualquier dispositivo */
-    width: 100%;
+    width: 40%;
 }
 
 .form-entrada {
@@ -277,20 +521,21 @@ p {
 
 .contenedor-contacto {
     display: flex;
+    flex-direction: rows;
     align-items: flex-start;
-    justify-content: flex-start;
-    gap: 100px;
-    margin: 20px 0 40px 0;
+    justify-content: space-between;    
     border: 2px solid rgb(107, 10, 107);
     border-radius: 10px;
     padding: 20px;
     background-color: rgba(167, 105, 225, 0.143);
-
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contacto-img img {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
     border-radius: 5px;
 
 }
@@ -318,10 +563,9 @@ p {
 
 .lema {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    display: block;
+    height: auto;
+    padding: 10px;
 
 
 }
@@ -369,73 +613,31 @@ p {
     height: auto;
 }
 
-/* Consulta de Medios / Media Query Responsive */
-
-/* Media Query para el navbar con 2 breakpoint para celulares, tablets y computadoras de escritorio */
-
-/* Celulares menos de 576px*/
-
+/* Media query para móviles < 576px */
 @media (max-width: 575px) {
-
-    .navbar {
-        padding: 8px 10px;
-    }
-
+    /* Navbar-brand un poco más pequeño */
     .navbar-brand {
         font-size: 20px;
     }
 
-    .navbar-brand img {
-        width: 45px;
+    /* Centrar la hamburguesa */
+    .navbar .navbar-toggler {
+        margin: 0 auto;       /* centra el botón */
+        display: block;       /* para que respete el margin auto */
     }
 
-    .navbar .nav-link {
-        padding: 10px 15px;
-        font-size: 14px;
+    /* Centrar el menú cuando se despliega */
+    .navbar-collapse {
         text-align: center;
     }
+}
 
-    .navbar-collapse {
-        background-color: rgb(25, 14, 186);
-        padding: 10px 0;
-    }
-
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .navbar-toggler {
-        padding: 4px;
-    }
-
-    .navbar-toggler-icon {
-        width: 21px;
-        height: 17px;
+@media (max-width: 575px) {
+    h1 {
+        font-size: 18px; /* ajústalo según lo quieras más grande o más pequeño */
     }
 }
 
-/* Tablets o Laptops entre 576px y 992px */
-
-@media (min-width: 576px) and (max-width: 992px) {
-    .navbar {
-        padding: 10px 15px;
-    }
-
-    .navbar-brand {
-        font-size: 24px;
-    }
-
-    .navbar-brand img {
-        width: 60px;
-    }
-
-    .navbar .nav-link {
-        font-size: 16px;
-        padding: 6px 10px;
-    }
-}
 
 /* Media Query para el footer con 2 breakpoint para celulares, tablets y computadoras de escritorio */
 
@@ -456,13 +658,16 @@ p {
     }
 
     .f-redes {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
         gap: 15px;
+        margin: 0 auto;
     }
 
     .f-redes img {
-        width: 40px;/
+        width: 40px;
+        height: auto;
     }
 }
 
@@ -553,16 +758,29 @@ p {
     .contenedor-contacto {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .form-contacto,
     .contacto-img img {
         width: 100%;
+        max-width: 100%;
     }
 
     .info-final {
         grid-template-columns: 1fr;
-        /* 1 columna */
+        gap: 20px;
+        text-align: center;
+    }
+
+    .info-final section {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .info-final iframe {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -572,6 +790,7 @@ p {
     .contenedor-contacto {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .form-contacto,
@@ -583,5 +802,40 @@ p {
 
     .info-final {
         grid-template-columns: 1fr;
+        text-align: center;
+        gap: 25px;
     }
+
+    .info-final section {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .info-final iframe {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+
+    }
+
 }
+
+
+/* Centrado de titulo principal h1 de gastronomia- sitios turisticos y contacto */
+
+.tituloh1-centrado {
+    text-align: center;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+
+
+
+
+
+
+

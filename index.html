@@ -17,13 +17,16 @@
 </head>
 
 <body>
-  <header>
 
-    <nav class="navbar navbar-expand-lg ">
+  <!-- Ingreso texto real e imagen del logo a la barra de navegación -->
+
+
+  <header>
+    <nav class="navbar navbar-expand-lg">
       <div class="container">
 
         <a class="navbar-brand" href="./index.html">
-          <img src="https://placehold.co/100x100" alt="Logotipo de la Agencia de Viajes" width="50">
+          <img src="./assets/icons/logo_header.jpg" alt="Logotipo de la Agencia de Viajes">
           Viajes "El Caribe"
         </a>
 
@@ -34,27 +37,18 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link a-nav" href="./index.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link a-nav" href="./pages/historia.html">Historia</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link a-nav" href="./pages/gastronomia.html">Gastronomía</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link a-nav" href="./pages/sitiosturisticos.html">Sitios Turísticos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link a-nav" href="./pages/contacto.html">Contacto</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pages/historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pages/gastronomia.html">Gastronomía</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pages/sitiosturisticos.html">Sitios Turísticos</a></li>
+            <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
           </ul>
         </div>
 
       </div>
     </nav>
   </header>
+
 
   <main>
 
@@ -65,40 +59,69 @@
 
       <div class="contenedor-texto">
 
-        <h1>Viajes "El Caribe"</h1>
+        <h1 class="titulo-principal">Viajes "El Caribe"</h1>
 
-        <h3>Isla de Margarita - La piedra de Silvia</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias incidunt maiores asperiores numquam
-          nulla suscipit ex aliquid, eligendi culpa est repellat excepturi eveniet cupiditate, iste veniam, dicta
-          distinctio tenetur ad?</p>
-      </div>
-      <!-- Agrego contenedores a todas las imágenes -->
+        <!-- Primer cuerpo de texto del main -->
 
-      <div class="contenedor-imagen1">
-        <img src="https://placehold.co/400x200" alt="Imagen provisional del contenido">
+        <h3>Isla de Margarita</h3>
+        <p>La Isla de Margarita también conocida como La Perla del Caribe es la principal isla que conforman el Estado
+          Nueva Esparta, junto a las islas Coche y Cubagua. </p>
+        <p>Es la isla mas grande de la República de Venezuela, y un hermoso lugar donde miles de turístas han
+          vacacionado a lo largo de los años.</p>
+        <p>
+          Te invitamos a descubrir mas acerca de su Historia, Geografía, Cultura y Tradiciones, Playas y Sitios de
+          Interés.</p>
+        <p>Si quieres información de como poder venir, nosotros te facilitamos lo que quieras saber, ya sea que quieras
+          venir de vacaciones, a pasar una temporada, o incluso si quieres venir a vivir, te asesoramos, contamos con
+          años de experiencia y trayectoria comprobable con muchas referencias comprobables de nuestro profesionalismo
+          turístico a nivel nacional e internacional.</p>
       </div>
+
+      <!-- Agrego contenedores a las imágenes -->
+
+      <figure class="contenedor-imagen1 imagen-ajustada">
+        <img src="./assets/img/isla_imagen1.jpeg" alt="vista de botes en la isla">
+        <figcaption>Vista de botes en la playa</figcaption>
+      </figure>
     </section>
 
-    <!-- comentario para probar commit en Github -->
+<!-- Segundo cuerpo de texto junto a imagen -->
 
-    <section class="seccion-grillas vertical">
-      <h3>Subtítulo 2</h3>
-
-      <div class="contenedor-imagen2">
-        <img src="https://placehold.co/300x200" alt="Imagen provisional del contenido">
+    <section class="seccion-grillas horizontal text-left">
+      <div class="contenedor-texto">
+        <h3>Nueva Esparta</h3>
+        <p>Nueva Esparta es un estado federal de Venezuela, ubicado al noreste del país, siendo el único Estado Federal
+          insular y el de menor superficie de la nación. El estado posee gran cantidad de monumentos históricos, en la
+          iglesia de Santa Ana fue declarada la Tercera República de Venezuela, y Simón Bolívar, su presidente.</p>
+        <p>Su capital es La Asunción. Otras poblaciones importantes son: Porlamar (capital comercial), Juan Griego,
+          Pampatar, Punta de Piedras, San Juan Bautista, Las Guevaras, Las Hernández, Villa Rosa, Bella Vista, El Valle
+          del Espíritu Santo, entre otras. Colón bautizó la isla con el nombre de La Asunción, por haber sido
+          descubierta en la fecha religiosa de la Virgen que lleva ese nombre.</p>
       </div>
 
-      <!-- Este estilo es temporal, solo es para probar algo de estilo centrado, en cursiva y negrita, pero para el proyecto final va a cambiar, en el proyecto el texto descriptivo irá posicionado a la derecha de la imagen -->
+
+      <figure class="contenedor-imagen2">
+        <img src="./assets/img/castillo_pampatar.jpg" alt="Castillo de Pampatar">
+        <figcaption>Castillo de Pampatar </figcaption>
+      </figure>
+
+      <!-- Estilo negrita y cursiva al final del main -->
+
       <div class="contenedor-texto">
-        <p class="p-textodestacado">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore eos tenetur
-          dicta! Libero facilis eligendi fugiat labore voluptas itaque. Commodi voluptatum modi nostrum cum
-          exercitationem nesciunt facilis veniam, impedit laboriosam. </p>
+        <p class="p-textodestacado">La Isla de Margarita posee un atractivo particular, muchos extranjeros que vinieron
+          a nuestra isla, decidieron hacer vida en ella, es un lugar cálido para vivir, con buenas costumbres y una
+          eterna primavera que solo se ve opacada con algunos días de lluvia, típico del clima tropical del Caribe. Te
+          invitamos a que nos visites, es un lugar al cual vas a querer volver a venir, ya sea en familia, o con tu
+          pareja, o inclusive puedes venir solo, siempre hay cosas divertidas y actividades culturales para realizar en
+          este maravilloso lugar, su gastronomía, gente, paisajes, historia, vida nocturna, actividad económica,
+          progreso y su eterna primavera lo convierten en el sitio ideal para vivir o venir de vacaciones.</p>
       </div>
     </section>
 
   </main>
 
-  <!-- Modifico el  footer -->
+  <!-- Footer  -->
+   <!-- footer Agencia de Viajes "El Caribe"  -->
 
   <footer class="f-grids">
     <div class="footer-info">
@@ -108,11 +131,20 @@
       </p>
     </div>
 
+    <!-- Acceso a redes sociales -->
+
     <div class="f-redes">
-      <img src="https://placehold.co/50x50" alt="ícono a facebook">
-      <img src="https://placehold.co/50x50" alt="ícono a instagram">
-      <img src="https://placehold.co/50x50" alt="ícono a Whatsapp">
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="./assets/icons/icons8-facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="./assets/icons/icons8-instagram.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/580000000000" target="_blank">
+        <img src="./assets/icons/icons8-whatsapp.png" alt="WhatsApp">
+      </a>
     </div>
+
   </footer>
 
   <!-- Cdn de Bootstrap a JavaScript  -->
