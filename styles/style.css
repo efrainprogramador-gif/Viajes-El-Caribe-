@@ -20,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+   
 }
 
 header {
@@ -43,7 +44,7 @@ header {
 .navbar .nav-link:hover {
     color: chartreuse !important;
     ;
-    /* apliqué important porque fue la manera como me marque el color flotante*/
+    /* apliqué important porque fue la manera como me marca el color flotante*/
 }
 
 .navbar .nav-link:active {
@@ -112,6 +113,11 @@ main {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
+
+    /* Se agrega un linear gradient bottom con un color verde marino hacia la parte inferior */
+
+     background-image: linear-gradient(to bottom, rgba(11, 243, 243, 0.128),rgba(141, 233, 152, 0.452) );
+     
 }
 
 h1 {
@@ -344,9 +350,21 @@ p {
     width: 270px;
     max-width: 100%;   
     height: 200px;
-    max-height: 100%;  
+    max-height: 100%; 
+
+     /*Agrego escala a la imagen "Recomendado en Clases" con transición suave,  */
+
+     transition: transform 0.5s ease 0.2s ;
 
 }
+
+/* Aplico Hover para que los 3 platos se vean mejor */
+
+.platos-principales li img:hover {
+    transform: scale(1.5) translate(25px, -10px);
+}
+ 
+
 
 /* Responsivo a Gastronomía */
 /* Para celulares */
