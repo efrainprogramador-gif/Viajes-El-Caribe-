@@ -1,0 +1,34 @@
+//Estilos a h1, h3, p.
+
+@use '../utilities/variables';
+
+h1 {
+  font-size: variables.$h1-size;
+  color: variables.$h1-color;
+  font-style: italic;
+  margin-top: 15px;
+  font-weight: 600;
+
+  //Responsivo h1 para celulares
+  @media (max-width: 575px) {
+
+    font-size: 18px;
+  }
+
+  //Responsivo para Tablets
+
+  @media (min-width: 576px) and (max-width: 992px) {
+
+    font-size: 24px;
+  }
+
+}
+
+h3 {
+  color: variables.$h3-color;
+  font-weight: 600;
+}
+
+p {
+  color: variables.$p-color;
+}

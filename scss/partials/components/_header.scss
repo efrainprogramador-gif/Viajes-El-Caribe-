@@ -1,0 +1,114 @@
+//Fuente del header
+
+//Se aplica indentación de 2 espacios a gusto personal con atajo: Shift + Alt + F
+
+
+header {
+  font-family: "Libre Baskerville", serif;
+}
+
+//Navbar Bootstrap con estilo personalizado haciendo nesting
+.navbar {
+  background-color: rgb(25, 14, 186);
+  padding: 13px 20px 12px 18px;
+
+  .nav-link {
+    color: white;
+    font-family: serif;
+    font-weight: bolder;
+
+    &:hover {
+      color: chartreuse !important; //apliqué important porque fue la manera como me marca el color flotante
+    }
+
+    &:active {
+      color: aqua !important; //Cuando se presiona click cambia a color aqua
+    }
+  }
+
+  .navbar-brand {
+    font-family: Arial, Helvetica, sans-serif, Times, serif;
+    // Fuente del logotipo 
+    font-style: italic;
+    color: whitesmoke;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+      width: 75px;
+      // tamaño del logo 
+      height: auto;
+    }
+
+// Media query para móviles < 576px 
+@media (max-width: 575px) {
+    // Navbar-brand un poco más pequeño     
+        font-size: 20px;
+  }
+
+
+// Media query para Tablets o Laptops chicas (576px a 992px)
+@media (min-width: 576px) and (max-width:992px) {        
+        font-size: 23px;
+  }
+
+}
+
+  // Botón hamburguesa personalizado 
+  .navbar-toggler {
+    border-color: #fff;
+    // borde del botón hamburguesa 
+    border-width: 3px;
+    border-radius: 10px;
+    // Agregado borde-radius 
+
+    // Aplico pseudoclases para dar mis estilos 
+    &:hover {
+      background-color: aquamarine;
+
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      // quita el borde negro del click 
+      box-shadow: none;
+      // quita cualquier sombra 
+
+
+    }
+
+
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      border: 2px solid whitesmoke;
+      background-color: rgb(8, 8, 172);
+
+    }
+
+
+    // Media query para móviles < 576px 
+
+// Se centra la hamburguesa   
+
+@media (max-width: 575px) {
+      
+        margin: 0 auto;
+        display: block;
+  }
+
+
+  }
+
+  // Centrar el menú cuando se despliega
+  @media (max-width: 575px) {
+      
+    .navbar-collapse {
+        text-align: center;
+    }
+  }
+
+}
