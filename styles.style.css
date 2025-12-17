@@ -19,17 +19,11 @@ body {
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 36px;
   color: rgb(186, 14, 143);
   font-style: italic;
   margin-top: 15px;
   font-weight: 600;
-  text-align: center;
-}
-h1 p {
-  color: indigo;
-  line-height: 1.5;
-  font-size: 16px;
 }
 @media (max-width: 575px) {
   h1 {
@@ -127,34 +121,6 @@ main .seccion-grillas.sitiosturisticos .contenedor-texto, main .seccion-grillas.
   flex-direction: column;
 }
 
-.contenedor-contacto .form-contacto .form-botones button {
-  padding: 10px 18px;
-  border: none;
-  background-color: aquamarine;
-  color: rgb(40, 13, 212);
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-main .contenedor-imagen1,
-main .contenedor-imagen2 {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  height: auto;
-}
-
-main .seccion-grillas.gastronomia .contenedor-imagen1.plato-central figcaption, main .seccion-grillas.horizontal.historia-horizontal figcaption, main .contenedor-imagen1 figcaption,
-main .contenedor-imagen2 figcaption {
-  text-align: center;
-  margin-top: 5px;
-  font-style: italic;
-  font-weight: 600;
-  color: black;
-}
-
 main {
   padding: 20px;
   flex: 1;
@@ -168,12 +134,24 @@ main {
 
 main .seccion-grillas.horizontal {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: start;
 }
 main .contenedor-texto {
   gap: 15px;
+}
+main .contenedor-texto h1.titulo-principal.animate__animated.animate__zoomIn {
+  color: rgb(186, 14, 143);
+  font-size: 36px;
+  text-align: center;
+}
+main .contenedor-texto h3 {
+  color: blue;
+}
+main .contenedor-texto p {
+  color: indigo;
+  line-height: 1.5;
 }
 main .contenedor-texto .p-textodestacado {
   font-weight: 700;
@@ -183,10 +161,15 @@ main .contenedor-texto .p-textodestacado {
 }
 main .contenedor-imagen1,
 main .contenedor-imagen2 {
-  padding: 5px;
-  border-radius: 8px;
-  background-color: white;
+  width: 100%;
+  height: auto;
   border: 2px solid rgb(25, 14, 186);
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 main .contenedor-imagen1 img,
 main .contenedor-imagen2 img {
@@ -195,6 +178,13 @@ main .contenedor-imagen2 img {
   height: auto;
   border: none;
   border-radius: 6px;
+}
+main .contenedor-imagen1 figcaption,
+main .contenedor-imagen2 figcaption {
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+  font-weight: 600;
 }
 @media (max-width: 575px) {
   main .seccion-grillas.horizontal {
@@ -206,13 +196,13 @@ main .contenedor-imagen2 img {
     gap: 10px;
   }
   main .contenedor-texto h1.titulo-principal {
-    font-size: 30px;
+    font-size: 28px;
   }
   main .contenedor-texto h3 {
     margin: 25px auto 10px auto;
   }
   main .contenedor-texto p {
-    font-size: 14px;
+    font-size: 16px;
   }
   main .contenedor-imagen1,
   main .contenedor-imagen2 {
@@ -225,44 +215,65 @@ main .contenedor-imagen2 img {
 }
 @media (min-width: 576px) and (max-width: 992px) {
   main .seccion-grillas.horizontal {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
   }
-  main .seccion-grillas.horizontal .contenedor-texto {
+  main .contenedor-texto {
     gap: 12px;
   }
-  main .seccion-grillas.horizontal .contenedor-texto h1.titulo-principal {
-    font-size: 34px;
+  main .contenedor-texto h1.titulo-principal {
+    font-size: 32px;
   }
-  main .seccion-grillas.horizontal .contenedor-texto p {
-    font-size: 15px;
+  main .contenedor-texto p {
+    font-size: 17px;
   }
-  main .seccion-grillas.horizontal .contenedor-texto .p-textodestacado {
-    text-align: center;
-  }
-  main .seccion-grillas.horizontal .contenedor-imagen1,
-  main .seccion-grillas.horizontal .contenedor-imagen2 {
+  main .contenedor-imagen1,
+  main .contenedor-imagen2 {
     width: 80%;
     margin: 0 auto;
   }
-  main .seccion-grillas.horizontal.text-left h3 {
-    margin-top: 20px;
-  }
 }
 
+main {
+  background: linear-gradient(to bottom, rgba(11, 243, 243, 0.128), rgba(141, 233, 152, 0.452));
+  padding: 20px;
+}
 main .seccion-grillas.horizontal.historia-horizontal {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   align-items: start;
 }
 main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto {
   gap: 15px;
 }
+main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto h1 {
+  color: rgb(186, 14, 143);
+  font-size: 36px;
+  text-align: center;
+}
+main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto p {
+  color: indigo;
+  line-height: 1.5;
+}
+main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto .p-textodestacado {
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  color: indigo;
+}
 main .seccion-grillas.horizontal.historia-horizontal .contenedor-imagen1.historia-imagen1 img {
   width: 100%;
   height: auto;
   border-radius: 6px;
+}
+main .seccion-grillas.horizontal.historia-horizontal .contenedor-imagen1.historia-imagen1 figcaption {
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+}
+main .seccion-grillas.colonizacion.historia-colonizacion h3 {
+  color: blue;
 }
 main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-texto {
   display: flex;
@@ -307,7 +318,7 @@ main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-text
     gap: 10px;
   }
   main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto h1 {
-    font-size: 34px;
+    font-size: 28px;
   }
   main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto p {
     font-size: 16px;
@@ -318,7 +329,6 @@ main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-text
     margin: 10px auto;
   }
   main .seccion-grillas.colonizacion.historia-colonizacion {
-    grid-template-columns: 1fr;
     margin: 20px;
     text-align: center;
   }
@@ -341,9 +351,8 @@ main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-text
 }
 @media (min-width: 576px) and (max-width: 992px) {
   main .seccion-grillas.horizontal.historia-horizontal {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
-    overflow: hidden;
   }
   main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto {
     gap: 12px;
@@ -356,32 +365,15 @@ main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-text
   }
   main .seccion-grillas.horizontal.historia-horizontal .contenedor-imagen1.historia-imagen1,
   main .seccion-grillas.horizontal.historia-horizontal .contenedor-imagen2.historia-imagen2 {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    display: block;
-    max-width: 100%;
-  }
-  main .seccion-grillas.colonizacion.historia-colonizacion {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  main .seccion-grillas.colonizacion.historia-colonizacion h3 {
-    margin-top: 20px;
   }
   main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-texto {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 20px;
-    flex-wrap: wrap;
-  }
-  main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-texto .contenedor-imagen2.historia-imagen2 {
-    width: 100%;
-    max-width: 100%;
-    margin-right: 0;
-  }
-  main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-texto {
-    margin-bottom: 15px;
   }
 }
 
@@ -392,9 +384,20 @@ main .seccion-grillas.gastronomia {
 main .seccion-grillas.gastronomia .contenedor-texto {
   gap: 15px;
 }
+main .seccion-grillas.gastronomia .contenedor-texto h1.tituloh1-centrado {
+  color: rgb(186, 14, 143);
+  font-size: 36px;
+  text-align: center;
+}
+main .seccion-grillas.gastronomia .contenedor-texto h3 {
+  color: blue;
+}
+main .seccion-grillas.gastronomia .contenedor-texto p {
+  color: indigo;
+  line-height: 1.5;
+}
 main .seccion-grillas.gastronomia .contenedor-imagen1.plato-central {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -406,6 +409,13 @@ main .seccion-grillas.gastronomia .contenedor-imagen1.plato-central {
 main .seccion-grillas.gastronomia .contenedor-imagen1.plato-central img {
   width: 100%;
   height: auto;
+  display: block;
+}
+main .seccion-grillas.gastronomia .contenedor-imagen1.plato-central figcaption {
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+  color: rgb(186, 14, 143);
 }
 main .seccion-grillas.gastronomia .platos-principales {
   list-style-type: none;
@@ -468,6 +478,10 @@ main .seccion-grillas.gastronomia .platos-principales li .texto-plato i {
     width: 90%;
     height: auto;
   }
+  main .contenedor-texto h3,
+  main .contenedor-texto p {
+    font-size: 16px;
+  }
 }
 @media (min-width: 576px) and (max-width: 992px) {
   main .plato-central {
@@ -492,6 +506,7 @@ main .seccion-grillas.gastronomia .platos-principales li .texto-plato i {
 }
 
 main {
+  padding: 20px;
   /* Secciones de grillas */
 }
 main .seccion-grillas.sitiosturisticos {
@@ -501,8 +516,19 @@ main .seccion-grillas.sitiosturisticos {
 main .seccion-grillas.sitiosturisticos .contenedor-texto {
   gap: 15px;
 }
-main .seccion-grillas.sitiosturisticos .castillo {
-  margin-top: 40px;
+main .seccion-grillas.sitiosturisticos .contenedor-texto h1.tituloh1-centrado {
+  color: rgb(186, 14, 143);
+  font-size: 36px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+main .seccion-grillas.sitiosturisticos .contenedor-texto h3 {
+  color: blue;
+}
+main .seccion-grillas.sitiosturisticos .contenedor-texto p {
+  color: indigo;
+  line-height: 1.5;
 }
 main .seccion-grillas.sitiosturisticos .img-playaelagua,
 main .seccion-grillas.sitiosturisticos .img-basilica {
@@ -513,23 +539,18 @@ main .seccion-grillas.sitiosturisticos .img-basilica {
 }
 main .seccion-grillas.sitiosturisticos .img-playaelagua img,
 main .seccion-grillas.sitiosturisticos .img-basilica img {
-  border-radius: 6px;
-  display: block;
-  margin: 0 auto;
-}
-main .seccion-grillas.sitiosturisticos .img-playaelagua img {
-  width: 100%;
-  max-width: 100%;
+  width: 80%;
   height: auto;
+  border-radius: 6px;
+}
+main .seccion-grillas.sitiosturisticos .img-playaelagua {
+  width: 80%;
 }
 main .seccion-grillas.sitiosturisticos .img-basilica {
-  width: 650px;
-  max-width: 100%;
-  margin: 0 auto;
+  width: 60%;
 }
-main .seccion-grillas.sitiosturisticos .img-basilica img {
-  width: 100%;
-  height: auto;
+main .seccion-grillas.sitiosturisticos .castillo {
+  margin-top: 40px;
 }
 @media (max-width: 575px) {
   main .img-playaelagua,
@@ -559,57 +580,41 @@ main .seccion-grillas.sitiosturisticos .img-basilica img {
   }
   main .seccion-grillas.sitiosturisticos h3 {
     font-size: 20px;
-    margin-top: 20px;
   }
   main .seccion-grillas.sitiosturisticos p {
     font-size: 17px;
   }
 }
 
-.contenedor-contacto {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  border: 2px solid rgb(25, 14, 186);
-  border-radius: 10px;
-  padding: 20px;
-  background-color: rgba(167, 105, 225, 0.143);
-  width: 100%;
-  box-sizing: border-box;
-}
-.contenedor-contacto .form-contacto {
+.form-contacto {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 20px;
-  min-width: 500px;
-  width: 60%;
+  min-width: 300px;
+  width: 40%;
 }
-.contenedor-contacto .form-contacto .form-entrada {
+.form-contacto .form-entrada {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 5px;
 }
-.contenedor-contacto .form-contacto .form-entrada label {
+.form-contacto .form-entrada label {
   font-weight: 700;
   color: rgb(23, 97, 215);
 }
-.contenedor-contacto .form-contacto .form-entrada input,
-.contenedor-contacto .form-contacto .form-entrada select,
-.contenedor-contacto .form-contacto .form-entrada textarea {
+.form-contacto .form-entrada input,
+.form-contacto .form-entrada select,
+.form-contacto .form-entrada textarea {
   padding: 7px;
   border: 1px solid blue;
   border-radius: 5px;
   font-size: 16px;
-  width: 350px;
-  box-sizing: border-box;
 }
-.contenedor-contacto .form-contacto .form-botones {
+.form-contacto .form-botones {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -617,10 +622,19 @@ main .seccion-grillas.sitiosturisticos .img-basilica img {
   gap: 15px;
   margin-top: 10px;
 }
-.contenedor-contacto .form-contacto .form-botones button:hover {
+.form-contacto .form-botones button {
+  padding: 10px 18px;
+  border: none;
+  background-color: aquamarine;
+  color: rgb(40, 13, 212);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.form-contacto .form-botones button:hover {
   opacity: 0.7;
 }
-.contenedor-contacto .form-contacto .form-botones button.borrar {
+.form-contacto .form-botones button.borrar {
   background-color: rgba(137, 43, 226, 0.482);
 }
 
@@ -637,6 +651,19 @@ main .seccion-grillas.sitiosturisticos .img-basilica img {
   max-width: 600px;
   height: auto;
   border-radius: 5px;
+}
+
+.contenedor-contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 2px solid rgb(107, 10, 107);
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgba(167, 105, 225, 0.143);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .info-final {
@@ -676,55 +703,16 @@ main .seccion-grillas.sitiosturisticos .img-basilica img {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    padding: 15px;
+  }
+  .form-contacto,
+  .contacto-img img {
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-  .contenedor-contacto .contacto-formulario {
-    width: 100%;
-  }
-  .contenedor-contacto .contacto-formulario .form-contacto {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    min-width: 0;
-  }
-  .contenedor-contacto .contacto-formulario .form-contacto .form-entrada {
-    width: 100%;
-    margin: 0;
-  }
-  .contenedor-contacto .contacto-formulario .form-contacto .form-entrada input,
-  .contenedor-contacto .contacto-formulario .form-contacto .form-entrada select,
-  .contenedor-contacto .contacto-formulario .form-contacto .form-entrada textarea {
-    width: 100%;
-    max-width: 100%;
-    padding: 8px;
-    font-size: 14px;
-    box-sizing: border-box;
-    margin: 0;
-  }
-  .contenedor-contacto .contacto-formulario .form-contacto .form-botones {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-    width: 100%;
-    margin-top: 10px;
-  }
-  .contenedor-contacto .contacto-img img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
   }
   .info-final {
     grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
-    margin: 0 auto;
-    padding: 15px;
   }
   .info-final section {
     max-width: 100%;
@@ -797,11 +785,6 @@ footer .f-grids .f-redes {
 footer .f-grids .f-redes img {
   width: 50px;
   height: auto;
-  transition: 0.3s ease;
-}
-footer .f-grids .f-redes img:hover {
-  filter: brightness(1.5);
-  transform: scale(1.1);
 }
 @media (max-width: 575px) {
   footer .f-grids {
@@ -845,4 +828,4 @@ footer .f-grids .f-redes img:hover {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.style.css.map */

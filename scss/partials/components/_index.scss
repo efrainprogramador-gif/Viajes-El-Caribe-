@@ -1,0 +1,121 @@
+@use '../utilities/extend';
+@use '../utilities/variables';
+@use '../utilities/mixins';
+@use '../components/mainhtml';
+
+//Sass solo para el main del index
+
+main {
+
+  // Secciones de grillas
+  .seccion-grillas.horizontal {
+
+    @include mixins.bloque-grillas(2, 20px, start);
+
+  }
+
+  // Contenedores de texto
+  .contenedor-texto {
+    @extend %flex-column;
+    gap: 15px;
+
+    .p-textodestacado {
+      font-weight: 700;
+      font-style: italic;
+      text-align: center;
+      color: variables.$p-color;
+    }
+  }
+
+  .contenedor-imagen1,
+  .contenedor-imagen2 {
+
+    @include mixins.bloque-repetido(5px, 8px, white);
+    @extend %contenedor-imagenesme;
+
+    img {
+      padding: 0;
+      width: 100%;
+      height: auto;
+      border: none;
+      border-radius: 6px;
+    }
+
+    figcaption {
+      @extend %plantillafigcaption;
+    }
+  }
+
+  // Responsivo a página principal
+
+  // Para Celulares
+  @media (max-width: 575px) {
+    .seccion-grillas.horizontal {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .contenedor-texto {
+      text-align: center;
+      gap: 10px;
+
+      h1.titulo-principal {
+        font-size: variables.$h1-celular;
+      }
+
+      h3 {
+        margin: 25px auto 10px auto;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .contenedor-imagen1,
+    .contenedor-imagen2 {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .navbar .navbar-collapse {
+      justify-content: center;
+    }
+  }
+
+  // Para tablets y laptops medianas
+  @media (min-width: 576px) and (max-width: 992px) {
+    .seccion-grillas.horizontal {
+      grid-template-columns: 1fr;
+      gap: 15px;
+
+      .contenedor-texto {
+        gap: 12px;
+
+        h1.titulo-principal {
+          font-size: variables.$h1-tablet;
+        }
+
+        p {
+          font-size: 15px;
+        }
+
+        .p-textodestacado {
+          text-align: center;
+        }
+      }
+
+      .contenedor-imagen1,
+      .contenedor-imagen2 {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .seccion-grillas.horizontal.text-left {
+      h3 {
+        margin-top: 20px;
+      }
+    }
+  }
+}

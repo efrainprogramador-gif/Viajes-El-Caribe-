@@ -1,6 +1,40 @@
+@use '../utilities/variables';
+
+
 //extend para el main del index
 
 %flex-column {
   display: flex;
   flex-direction: column;
+}
+
+//extend para botones del formulario
+
+%boton-contacto {
+  padding: 10px 18px;
+  border: none;
+  background-color: aquamarine;
+  color: rgb(40, 13, 212);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+//contenedor para imagenes en el index
+%contenedor-imagenesme {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: auto;
+
+}
+
+//plantilla para todos los figcaption
+%plantillafigcaption {
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+  font-weight: 600;
+  color: black;
 }

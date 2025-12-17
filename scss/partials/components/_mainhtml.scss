@@ -1,9 +1,11 @@
 //Estilos para el main de las 5 páginas del sitio web
 
+//Esta pagina se utilizará para que herede estilos generales a las 5 páginas del sitio web
+
 @use '../utilities/variables';
 
 main {
-    padding: 8px 12px;
+    padding: 20px;
     flex: 1;
     width: 100%;
     max-width: 100%;
@@ -11,6 +13,11 @@ main {
 
     /* Se agrega un linear gradient bottom con un color verde marino hacia la parte inferior */
 
-     background-image: variables.$bgimg-gradient-main;
-     
+    background-image: variables.$bgimg-gradient-main;
+
+    // Se agrega un linear gradient bottom con un color verde marino hacia la parte inferior 
+    
+    background-image: linear-gradient(to bottom,
+            rgba(11, 243, 243, 0.128),
+            rgba(141, 233, 152, 0.452));
 }

@@ -42,19 +42,17 @@ header {
       height: auto;
     }
 
-// Media query para móviles < 576px 
-@media (max-width: 575px) {
-    // Navbar-brand un poco más pequeño     
-        font-size: 20px;
+    // Media query para móviles < 576px 
+    @media (max-width: 575px) {
+      // Navbar-brand un poco más pequeño     
+      font-size: 20px;
+    }
   }
 
-
-// Media query para Tablets o Laptops chicas (576px a 992px)
-@media (min-width: 576px) and (max-width:992px) {        
-        font-size: 23px;
+  // Media query para Tablets o Laptops chicas (576px a 992px)
+  @media (min-width: 576px) and (max-width:992px) {
+    font-size: 23px;
   }
-
-}
 
   // Botón hamburguesa personalizado 
   .navbar-toggler {
@@ -67,7 +65,6 @@ header {
     // Aplico pseudoclases para dar mis estilos 
     &:hover {
       background-color: aquamarine;
-
     }
 
     &:focus,
@@ -76,8 +73,6 @@ header {
       // quita el borde negro del click 
       box-shadow: none;
       // quita cualquier sombra 
-
-
     }
 
 
@@ -89,26 +84,21 @@ header {
 
     }
 
-
     // Media query para móviles < 576px 
 
-// Se centra la hamburguesa   
+    // Se centra la hamburguesa   
 
-@media (max-width: 575px) {
-      
-        margin: 0 auto;
-        display: block;
-  }
-
-
+    @media (max-width: 575px) {
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   // Centrar el menú cuando se despliega
   @media (max-width: 575px) {
-      
+
     .navbar-collapse {
-        text-align: center;
+      text-align: center;
     }
   }
-
 }

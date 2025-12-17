@@ -1,0 +1,148 @@
+@use '../utilities/extend';
+@use '../utilities/variables';
+@use '../utilities/mixins';
+@use '../components/mainhtml';
+
+// SASS para el main de la página Gastronomía
+main {
+
+  // Secciones de grillas
+  .seccion-grillas.gastronomia {
+    gap: 20px;
+    margin-bottom: 40px;
+
+    .contenedor-texto {
+      @extend %flex-column;
+      gap: 15px;
+    }
+
+    .contenedor-imagen1.plato-central {
+      @include mixins.bloque-centrado(row);
+      @include mixins.ancho_bloques(700px, 90%, 5px);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      figcaption {
+        @extend %plantillafigcaption;
+      }
+    }
+
+    // Lista de platos principales
+    .platos-principales {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5px 10px;
+        border-radius: 3px;
+        gap: 20px;
+
+        img {
+          width: 270px;
+          max-width: 100%;
+          height: 200px;
+          max-height: 100%;
+          border-radius: 6px;
+          transition: transform 0.5s ease 0.2s;
+
+          //Aplico Hover para que los 3 platos se vean mejor
+
+          &:hover {
+            transform: scale(1.5) translate(25px, -10px);
+          }
+        }
+
+        .texto-plato {
+          color: variables.$p-color;
+
+          i {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  // Responsivo a página Gastronomía
+
+  // Para celulares
+  @media (max-width: 575px) {
+
+    .tituloh1-centrado {
+      font-size: 24px;
+    }
+
+    .plato-central {
+      width: 90%;
+      max-width: 100%;
+      padding: 5px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .platos-principales {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+
+
+      li {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        gap: 10px;
+
+        img {
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+    }
+
+  // Para tablets y laptops medianas
+  @media (min-width: 576px) and (max-width: 992px) {
+    .plato-central {
+      width: 80%;
+      max-width: 700px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .platos-principales {
+      li {
+        img {
+          width: 70%;
+          height: auto;
+        }
+      }
+    }
+
+    .contenedor-texto {
+      h3,
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .gastronomia .tituloh1-centrado {
+      font-size: 28px;
+    }
+  }
+}

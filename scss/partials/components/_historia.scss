@@ -1,0 +1,181 @@
+@use '../utilities/extend';
+@use '../utilities/variables';
+@use '../utilities/mixins';
+@use '../components/mainhtml';
+
+//SASS para el main de la página historia
+
+main {
+
+  // Secciones de grillas
+
+  .seccion-grillas.horizontal.historia-horizontal {
+    @include mixins.bloque-grillas(2, 20px, start);
+
+    // Contenedor de texto principal
+
+    .contenedor-texto {
+      @extend %flex-column;
+      gap: 15px;
+    }
+
+    // Imagen principal de historia
+
+    .contenedor-imagen1.historia-imagen1 img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    figcaption {
+      @extend %plantillafigcaption;
+    }
+  }
+
+  // Sección colonización
+
+  .seccion-grillas.colonizacion.historia-colonizacion {
+
+    .contenedor-imagen-texto {
+      @include mixins.flex-container(row, flex-start, flex-start);
+      gap: 20px;
+      margin-top: 15px;
+
+      .contenedor-imagen2.historia-imagen2 {
+        margin-right: 20px;
+        max-width: 300px;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+
+        figcaption {
+          text-align: center;
+          margin-top: 5px;
+          font-style: italic;
+        }
+      }
+
+      .contenedor-texto {
+        @include mixins.flex-container(column, flex-start, flex-start);
+        flex: 1;
+        gap: 10px;
+
+        p {
+          color: variables.$p-color;
+        }
+      }
+    }
+  }
+
+  // Responsivo a página Historia 
+
+  // Para Celulares 
+  @media (max-width: 575px) {
+    .seccion-grillas.horizontal.historia-horizontal {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .contenedor-texto {
+        text-align: center;
+        gap: 10px;
+
+        h1 {
+          font-size: variables.$h1-tablet;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+      }
+
+      .contenedor-imagen1.historia-imagen1,
+      .contenedor-imagen2.historia-imagen2 {
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+
+    .seccion-grillas.colonizacion.historia-colonizacion {
+      grid-template-columns: 1fr;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-texto {
+      @include mixins.flex-container(column, center, center);
+      gap: 10px;
+
+      .contenedor-imagen2.historia-imagen2 {
+        width: 80%;
+        max-width: 250px;
+        margin: 0 auto 20px auto;
+      }
+
+      .contenedor-texto {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  // Para tablets y laptops medianas
+  @media (min-width: 576px) and (max-width: 992px) {
+    .seccion-grillas.horizontal.historia-horizontal {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      overflow: hidden;
+
+      .contenedor-texto {
+        gap: 12px;
+
+        h1 {
+          font-size: 32px;
+        }
+
+        p {
+          font-size: 17px;
+        }
+      }
+
+      .contenedor-imagen1.historia-imagen1,
+      .contenedor-imagen2.historia-imagen2 {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+      }
+    }
+
+    .seccion-grillas.colonizacion.historia-colonizacion {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      h3 {
+        margin-top: 20px;
+      }
+
+      .contenedor-imagen-texto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .contenedor-imagen2.historia-imagen2 {
+          width: 100%;
+          max-width: 100%;
+          margin-right: 0;
+        }
+      }
+
+      .contenedor-texto {
+        margin-bottom: 15px;
+      }
+    }
+
+  }
+}

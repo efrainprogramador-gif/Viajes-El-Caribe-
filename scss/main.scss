@@ -5,10 +5,14 @@
 //COMPONENTS
 @use './partials/components/general';
 @use './partials/components/header';
+@use './partials/components/index';
+@use './partials/components/historia';
+@use './partials/components/gastronomia';
+@use './partials/components/sitiosturisticos';
 @use './partials/components/mainhtml';
-@use './partials/components/cards';
-@use './partials/components/buttons';
+@use './partials/components/contacto';
 @use './partials/components/footer';
+
 
 
 

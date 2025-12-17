@@ -752,7 +752,7 @@ p {
 
 /* Celulares menos de 576px */
 
-/*
+
 @media (max-width: 575px) {
 
     .seccion-grillas.horizontal {
@@ -785,7 +785,7 @@ p {
 
 /* Tablets o Laptops entre 576px y 992px */
 
-/*
+
 
 @media (min-width: 576px) and (max-width: 992px) {
     .seccion-grillas.horizontal {

@@ -1,0 +1,111 @@
+@use '../utilities/extend';
+@use '../utilities/variables';
+@use '../utilities/mixins';
+@use '../components/mainhtml';
+
+
+
+// SASS para el main de la página Sitios Turísticos
+main {
+
+
+  /* Secciones de grillas */
+  .seccion-grillas.sitiosturisticos {
+    gap: 20px;
+    margin-bottom: 40px;
+
+    .contenedor-texto {
+      @extend %flex-column;
+      gap: 15px;
+    }
+
+    .castillo {
+      margin-top: 40px;
+    }
+
+    .img-playaelagua,
+    .img-basilica {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+
+      img {
+
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+
+      }
+    }
+
+
+    .img-playaelagua {
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .img-basilica {
+      width: 650px;
+      max-width: 100%;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  // Responsivo a página Sitios Turísticos
+
+  // Para celulares
+  
+  @media (max-width: 575px) {
+
+    .img-playaelagua,
+    .img-basilica {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .contenedor-texto {
+      align-items: center;
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  // Para tablets y laptops medianas
+  @media (min-width: 576px) and (max-width: 992px) {
+    .seccion-grillas.sitiosturisticos {
+      gap: 15px;
+
+      h1 {
+        font-size: 32px;
+      }
+
+      h3 {
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+}
