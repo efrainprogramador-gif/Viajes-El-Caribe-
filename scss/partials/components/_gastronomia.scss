@@ -14,6 +14,7 @@ main {
     .contenedor-texto {
       @extend %flex-column;
       gap: 15px;
+      
     }
 
     .contenedor-imagen1.plato-central {
@@ -82,6 +83,14 @@ main {
       font-size: 24px;
     }
 
+.tercerh3 {
+  margin-top: -15px;
+}
+
+.cuartoh3 {
+  margin-bottom: 17px;
+}
+
     .plato-central {
       width: 90%;
       max-width: 100%;
@@ -138,6 +147,10 @@ main {
       h3,
       p {
         font-size: 18px;
+      }
+
+      .cuartoh3 {
+        margin-bottom: 17px;
       }
     }
 

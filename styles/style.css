@@ -208,8 +208,11 @@ main .contenedor-imagen2 img {
   main .contenedor-texto h1.titulo-principal {
     font-size: 30px;
   }
-  main .contenedor-texto h3 {
-    margin: 25px auto 10px auto;
+  main .contenedor-texto .primerh3 {
+    margin-top: -5px;
+  }
+  main .contenedor-texto .segundoh3 {
+    margin-top: 25px;
   }
   main .contenedor-texto p {
     font-size: 14px;
@@ -308,6 +311,9 @@ main .seccion-grillas.colonizacion.historia-colonizacion .contenedor-imagen-text
   }
   main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto h1 {
     font-size: 34px;
+  }
+  main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto h3 {
+    margin-top: 10px;
   }
   main .seccion-grillas.horizontal.historia-horizontal .contenedor-texto p {
     font-size: 16px;
@@ -444,6 +450,12 @@ main .seccion-grillas.gastronomia .platos-principales li .texto-plato i {
   main .tituloh1-centrado {
     font-size: 24px;
   }
+  main .tercerh3 {
+    margin-top: -15px;
+  }
+  main .cuartoh3 {
+    margin-bottom: 17px;
+  }
   main .plato-central {
     width: 90%;
     max-width: 100%;
@@ -485,6 +497,9 @@ main .seccion-grillas.gastronomia .platos-principales li .texto-plato i {
   main .contenedor-texto h3,
   main .contenedor-texto p {
     font-size: 18px;
+  }
+  main .contenedor-texto .cuartoh3 {
+    margin-bottom: 17px;
   }
   main .gastronomia .tituloh1-centrado {
     font-size: 28px;
@@ -545,6 +560,7 @@ main .seccion-grillas.sitiosturisticos .img-basilica img {
   }
   main .contenedor-texto h3 {
     font-size: 18px;
+    margin-top: -5px;
   }
   main .contenedor-texto p {
     font-size: 16px;
